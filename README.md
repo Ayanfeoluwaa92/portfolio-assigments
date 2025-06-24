@@ -43,7 +43,7 @@ Edit the following files to customize your portfolio:
 #### `index.html`
 
 - Update the title in the `<head>` section
-- Change "John Doe" to your name throughout the file
+- Change "Idowu Damilola Eunice" to your name throughout the file
 - Update the hero subtitle and description
 - Modify the about section content
 - Add your own projects to the projects section
