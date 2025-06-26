@@ -739,6 +739,11 @@ section {
   .hamburger.active .bar:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    justify-items: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -834,6 +839,19 @@ section {
     max-width: 100%;
     min-width: 0;
     box-sizing: border-box;
+  }
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 0;
+  }
+  .stat {
+    padding: 1rem;
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin-left: -16px;
+    border-radius: 0;
   }
 }
 
