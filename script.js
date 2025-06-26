@@ -82,8 +82,8 @@ const observerOptions = {
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
     }
-  });
-}, observerOptions);
+  );
+, observerOptions;
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
