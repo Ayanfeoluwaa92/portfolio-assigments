@@ -78,10 +78,7 @@ const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -40px 0px',
 };
-c:\Users\USER\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\F60956629EAEC870147A54F714C7C777\script.js
-const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
     }
