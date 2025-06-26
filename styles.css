@@ -656,24 +656,217 @@ section {
   .social-sidebar {
     right: 8px;
   }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .testimonials-slider {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    width: 220px;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    box-shadow: 0 4px 24px rgba(34, 197, 94, 0.07);
+    padding: 1.5rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    height: calc(100vh - 64px);
+    z-index: 1200;
+    display: flex;
+  }
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+  .nav-item {
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  .nav-link {
+    width: 100%;
+    font-size: 1.15rem;
+    padding: 0.7rem 0;
+    display: block;
+  }
+  .btn-outline.download-cv {
+    display: none;
+  }
+  .hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1300;
+    margin-left: 1rem;
+  }
+  .hamburger .bar {
+    width: 26px;
+    height: 3px;
+    background: #22c55e;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 }
 
 @media (max-width: 600px) {
-  .nav-container {
-    padding: 0 10px;
-  }
+  .nav-container,
   .hero-container {
-    padding: 0 10px;
+    padding: 0 5px;
   }
   .profile-img-bg {
-    width: 220px;
-    height: 240px;
+    width: 160px;
+    height: 180px;
   }
   .profile-img,
   .profile-outline {
-    width: 170px;
-    height: 220px;
+    width: 120px;
+    height: 160px;
   }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .about-card {
+    width: 120px;
+    height: 120px;
+    font-size: 2rem;
+  }
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem;
+    margin-bottom: 0;
+  }
+  .contact-form {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(34, 197, 94, 0.06);
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .form-row input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+  .form-group textarea {
+    font-size: 1rem;
+    padding: 12px 10px;
+  }
+  .btn-green.submit-btn {
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 8px;
+  }
+  .testimonial-card {
+    padding: 1rem 0.5rem 0.8rem 0.5rem;
+    max-width: 100%;
+  }
+  .footer {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  body {
+    font-size: 0.98rem;
+  }
+  .btn,
+  .btn-green,
+  .btn-outline {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .about-text,
+  .about-image {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 901px) {
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    transform: none;
+  }
+  .hamburger {
+    display: none !important;
+  }
+  .btn-outline.download-cv {
+    display: inline-block;
+  }
+}
+
+img,
+.profile-img,
+.testimonial-avatar {
+  max-width: 100%;
+  height: auto;
+}
+.project-card,
+.skill-category,
+.about-card {
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Animations */
